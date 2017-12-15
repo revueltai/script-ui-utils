@@ -2,8 +2,7 @@
 Some utils to easier work with Script UI on Adobe products.
 
 ### UIWindow.jsx
-
-This script should make creating a UI Window easier and more descriptive.
+This script should make creating a UI Window more descriptive and easier than using the traditional approach.
 
 Example:
 
@@ -43,3 +42,8 @@ var myWindow = new UIWindow({
   }
 });
 ```
+
+Advantages of UIWindow:
+- Each property is named, and easy to identify.
+- It becomes easier understanding which element is parent of what.
+- Event handlers can be added directly to the object if wanted.
