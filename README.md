@@ -1,7 +1,8 @@
 # ScriptUI Utils
 Some utils to easier work with Script UI on Adobe products.
 
-##UIWindow.jsx
+###UIWindow.jsx
+
 This script should make creating a UI Window easier and more descriptive.
 
 Example:
