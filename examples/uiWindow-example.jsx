@@ -1,3 +1,4 @@
+// Make sure UIWindow.jsx is at the same level as the example. 
 //@include "UIWindow.jsx"
 
 var view = new UIWindow({
