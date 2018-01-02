@@ -10,8 +10,12 @@ Traditional approach:
 ```
 var window   = new Window('dialog', 'My Dialog', [100, 100, 480, 245]);
 window.panel = window.add('panel', [15, 50, 365, 115], 'Panel');
-window.panel.add('button', [235, 15, 335, 45], 'Cancel', {name:'cancel'});
+window.panel.add('button', [235, 15, 335, 45], 'Cancel', {name:'btnCancel'});
+window.panel.add('button', [235, 15, 335, 45], 'Run', {name:'btnRun'});
 window.show();
+window.addEventListener('click', function(event) {
+  alert('Callback for button RUN');
+});
 ```
 
 With UIWindow.jsx:
@@ -33,17 +37,24 @@ var myWindow = new UIWindow({
         orientation: 'row'
       }
     },
-    'btnClose': {
+    'btnCancel': {
       type: 'button',
       parent: 'panelElement',
       bounds: [235, 15, 335, 45],
       title: 'Cancel'
+    },
+    'btnCancel': {
+      type: 'button',
+      parent: 'panelElement',
+      bounds: [235, 15, 335, 45],
+      title: 'Run',
+      event: {
+        type: 'click',
+        callback: function() {
+          alert('Callback for button RUN');
+        }
+      }
     }
   }
 });
 ```
-
-Advantages of UIWindow:
-- Each property is named, and easy to identify.
-- It becomes easier understanding which element is parent of what.
-- Event handlers can be added directly to the object if wanted.
