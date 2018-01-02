@@ -1,8 +1,18 @@
 # ScriptUI Utils
-Some utils to easier work with Script UI on Adobe products.
+Some util scripts to work faster with Script UI + Adobe products.
+
+### Console.jsx
+Creates a log file.
+
+```
+...
+...
+Console.log(value1, value2, ...);
+...
+```
 
 ### UIWindow.jsx
-This script should make creating a UI Window more descriptive and easier than using the traditional approach.
+Makes the process of creating a UI Window more descriptive and easier than using the traditional approach.
 
 Example:
 
